@@ -1,0 +1,182 @@
+:root {
+    --pink: #F075AA;
+    --cream: #F7DB91;
+    --white-soft: #FFFDCE;
+    --olive: #9BC264;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--white-soft);
+
+    background-image: url("mushab.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(240, 117, 170, 0.75); /* pink */
+}
+
+header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: var(--white-soft);
+}
+
+
+.card {
+    background: rgba(255, 253, 206, 0.95); /* off white */
+    color: #333;
+    margin: 20px auto;
+    padding: 25px;
+    width: 80%;
+    border-radius: 16px;
+    border-left: 8px solid var(--olive);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+.card h2 {
+    color: var(--pink);
+}
+
+
+button {
+    display: block;
+    margin: 30px auto;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    background: var(--olive);
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: var(--pink);
+    transform: scale(1.05);
+}
+
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: rgba(155, 194, 100, 0.85); /* olive */
+    color: #fff;
+}
+
+
+/* ===== ANIMASI SCROLL FADE ===== */
+.fade {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease;
+}
+
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== POPUP ===== */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.popup-content {
+    background: var(--white-soft);
+    color: #333;
+    padding: 30px;
+    border-radius: 18px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-top: 6px solid var(--pink);
+    animation: zoomIn 0.6s ease;
+}
+
+.close-btn {
+    background: var(--pink);
+    color: white;
+}
+
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.6);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+h1, h2 {
+    letter-spacing: 1px;
+}
+
+p, li {
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+.identity {
+    width: 80%;
+    margin: 25px auto;
+    padding: 22px;
+    background: rgba(255, 253, 206, 0.95);
+    border-left: 8px solid var(--olive);
+    border-radius: 16px;
+    color: #333;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+.identity h3 {
+    color: var(--pink);
+    margin-bottom: 12px;
+}
+
+.name-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 12px;
+}
+
+.name-list li {
+    font-weight: 600;
+    font-size: 18px;
+    margin: 6px 0;
+}
+
+.class-info {
+    font-weight: 500;
+    color: var(--olive);
+}
+
+.school {
+    font-size: 18px;
+    margin-top: 6px;
+    color: #555;
+}
